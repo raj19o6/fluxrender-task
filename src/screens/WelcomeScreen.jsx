@@ -6,7 +6,7 @@ import { GoogleLogoIcon } from '../assets/vectors';
 
 export const WelcomeScreen = ({ onNavigateNext }) => {
   return (
-    <div className="relative min-h-screen w-full flex flex-col justify-between overflow-hidden font-sans select-none">
+    <div className="relative min-h-[100dvh] h-full w-full flex flex-col justify-between overflow-hidden font-sans select-none">
       {/* Full Bleed Figma Background Image */}
       <img
         src={bgImg}
@@ -18,10 +18,10 @@ export const WelcomeScreen = ({ onNavigateNext }) => {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-emerald-950/10 to-emerald-950/40 pointer-events-none" />
 
       {/* Top Spacer */}
-      <div className="relative z-10 pt-16 px-6" />
+      <div className="relative z-10 pt-12 sm:pt-16 px-6" />
 
       {/* Main Content & Action Area floating directly on bg.png */}
-      <div className="relative z-10 p-6 sm:p-8 flex flex-col gap-6 pb-10 max-w-lg mx-auto w-full">
+      <div className="relative z-10 p-6 sm:p-8 flex flex-col gap-6 pb-8 sm:pb-10 max-w-lg mx-auto w-full">
         {/* Headline & Description matching Figma Screen 1 */}
         <motion.div
           initial={{ opacity: 0, y: 25 }}

@@ -35,12 +35,12 @@ export const ScheduleScreen = ({
   const hasSelection = Boolean(scheduleData.date || scheduleData.time || scheduleData.address);
 
   return (
-    <div className="min-h-screen w-full bg-[#F8F8FB] flex flex-col justify-between font-sans">
+    <div className="min-h-[100dvh] h-full w-full bg-[#F8F8FB] flex flex-col justify-between font-sans">
       {/* Header matching Figma */}
       <Header title="Schedule" onBack={onBack} />
 
       {/* Main Content Body */}
-      <div className="flex-1 p-4 sm:p-5 flex flex-col gap-5 overflow-y-auto pb-24">
+      <div className="flex-1 p-4 sm:p-5 flex flex-col gap-4 overflow-y-auto pb-20">
         {/* Service Card matching Figma */}
         <div className="bg-white rounded-2xl p-4 shadow-xs border border-slate-100/90 flex items-center justify-between">
           <div className="flex items-center gap-3.5">
@@ -159,7 +159,7 @@ export const ScheduleScreen = ({
         </div>
       </div>
 
-      {/* Sticky Bottom Action Bar - Hidden in default state per Figma spec, slides up when user selects options */}
+      {/* Sticky Bottom Action Bar */}
       <AnimatePresence>
         {hasSelection && (
           <motion.div
